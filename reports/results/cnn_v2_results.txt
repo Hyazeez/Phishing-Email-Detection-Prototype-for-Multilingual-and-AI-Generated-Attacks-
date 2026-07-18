@@ -1,0 +1,108 @@
+CNN Benchmark - Multilingual V2 Dataset
+============================================================
+
+Train shape: (42044, 28)
+Validation shape: (9009, 28)
+Test shape: (9010, 28)
+
+Training class distribution:
+category
+Legitimate                   13695
+Traditional_Phishing         12284
+Spam                         10961
+AI_Generated_Phishing         2800
+Business_Email_Compromise     2304
+
+Class order:
+['AI_Generated_Phishing', 'Business_Email_Compromise', 'Legitimate', 'Spam', 'Traditional_Phishing']
+
+Validation Results:
+Validation Accuracy: 0.9789099789099789
+Validation Macro F1: 0.9810829106440376
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.97      0.97      0.97       494
+               Legitimate       0.97      0.98      0.97      2934
+                     Spam       0.96      0.96      0.96      2349
+     Traditional_Phishing       1.00      0.99      0.99      2632
+
+                 accuracy                           0.98      9009
+                macro avg       0.98      0.98      0.98      9009
+             weighted avg       0.98      0.98      0.98      9009
+
+
+Test Results:
+Test Accuracy: 0.9776914539400666
+Test Macro F1: 0.9787979113138959
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.95      0.98      0.97       494
+               Legitimate       0.97      0.98      0.97      2935
+                     Spam       0.96      0.96      0.96      2349
+     Traditional_Phishing       1.00      0.99      1.00      2632
+
+                 accuracy                           0.98      9010
+                macro avg       0.98      0.98      0.98      9010
+             weighted avg       0.98      0.98      0.98      9010
+
+
+Confusion Matrix:
+[[ 600    0    0    0    0]
+ [   0  483    4    5    2]
+ [   0    0 2866   69    0]
+ [   0   21   78 2245    5]
+ [   0    3    5    9 2615]]
+
+Training History:
+{
+  "accuracy": [
+    0.8369327187538147,
+    0.9375416040420532,
+    0.9525259137153625,
+    0.9621824622154236,
+    0.9646322727203369,
+    0.9713395237922668,
+    0.9729331135749817,
+    0.9760488867759705,
+    0.9770716428756714,
+    0.9799971580505371
+  ],
+  "loss": [
+    0.41348910331726074,
+    0.1772960126399994,
+    0.13631145656108856,
+    0.10829860717058182,
+    0.10297350585460663,
+    0.08422589302062988,
+    0.08027008920907974,
+    0.07214318215847015,
+    0.0647217258810997,
+    0.05862116441130638
+  ],
+  "val_accuracy": [
+    0.943278968334198,
+    0.9402819275856018,
+    0.9694749712944031,
+    0.9694749712944031,
+    0.9674769639968872,
+    0.9724719524383545,
+    0.97735595703125,
+    0.9783549904823303,
+    0.978909969329834,
+    0.9784659743309021
+  ],
+  "val_loss": [
+    0.15516701340675354,
+    0.15818195044994354,
+    0.09118390083312988,
+    0.08704918622970581,
+    0.08679031580686569,
+    0.07472102344036102,
+    0.06562992930412292,
+    0.06567028164863586,
+    0.06498288363218307,
+    0.06286314874887466
+  ]
+}

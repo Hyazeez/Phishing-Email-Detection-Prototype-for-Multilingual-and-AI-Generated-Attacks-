@@ -1,0 +1,71 @@
+Robustness Testing Results
+==================================================
+
+Robustness Test Accuracy: 0.6
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       0.00      0.00      0.00        10
+Business_Email_Compromise       0.00      0.00      0.00         3
+               Legitimate       0.38      1.00      0.55         3
+                     Spam       0.22      1.00      0.36         2
+     Traditional_Phishing       0.76      0.78      0.77        32
+
+                 accuracy                           0.60        50
+                macro avg       0.27      0.56      0.34        50
+             weighted avg       0.52      0.60      0.54        50
+
+
+Detailed Results:
+                        attack_type                  category           prediction  confidence  correct
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.720     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.470     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.600     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.485     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.530     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.520     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.330     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.520     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.525     True
+Sinhala-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.495     True
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.830     True
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.525     True
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.395     True
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.575     True
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.765     True
+  Tamil-English code-mixed phishing      Traditional_Phishing                 Spam       0.460    False
+  Tamil-English code-mixed phishing      Traditional_Phishing                 Spam       0.525    False
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.400     True
+  Tamil-English code-mixed phishing      Traditional_Phishing                 Spam       0.530    False
+  Tamil-English code-mixed phishing      Traditional_Phishing Traditional_Phishing       0.415     True
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.580    False
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.590    False
+              AI-generated phishing     AI_Generated_Phishing                 Spam       0.275    False
+              AI-generated phishing     AI_Generated_Phishing                 Spam       0.335    False
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.625    False
+              AI-generated phishing     AI_Generated_Phishing           Legitimate       0.420    False
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.565    False
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.460    False
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.515    False
+              AI-generated phishing     AI_Generated_Phishing Traditional_Phishing       0.490    False
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.405     True
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.575     True
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.375     True
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.405     True
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.635     True
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.515     True
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.360     True
+            Obfuscated URL phishing      Traditional_Phishing           Legitimate       0.395    False
+            Obfuscated URL phishing      Traditional_Phishing Traditional_Phishing       0.380     True
+            Obfuscated URL phishing      Traditional_Phishing           Legitimate       0.360    False
+          Business Email Compromise Business_Email_Compromise           Legitimate       0.445    False
+          Business Email Compromise Business_Email_Compromise Traditional_Phishing       0.480    False
+          Business Email Compromise Business_Email_Compromise           Legitimate       0.510    False
+              Noisy spelling attack      Traditional_Phishing                 Spam       0.510    False
+              Noisy spelling attack      Traditional_Phishing                 Spam       0.385    False
+      Legitimate multilingual email                Legitimate           Legitimate       0.695     True
+     Legitimate Tamil-English email                Legitimate           Legitimate       0.665     True
+           Legitimate English email                Legitimate           Legitimate       0.525     True
+             Spam promotional email                      Spam                 Spam       0.510     True
+             Spam promotional email                      Spam                 Spam       0.800     True

@@ -1,0 +1,7 @@
+﻿Model,Model Type,Dataset,Test Accuracy,Macro F1,Remarks
+Logistic Regression,Classical ML Baseline,V2 Multilingual,98.01,0.98,Strong TF-IDF baseline
+Random Forest,Classical ML Baseline,V2 Multilingual,98.28,0.984,Best overall model
+CNN,Deep Learning Baseline,V2 Multilingual,97.77,0.979,Strong deep learning baseline
+LSTM,Deep Learning Baseline,V2 Multilingual,87.82,0.886,Lower performance on spam/legitimate separation
+XGBoost Structured Only,Structured Feature Model,Hybrid V2 Subset / Structured Features,80.08,0.819,Uses only structured features
+Transformer + XGBoost + MLP Fusion,Hybrid Model,Hybrid V2 Transformer + Structured Features,95.82,0.948,Completed proposed hybrid architecture

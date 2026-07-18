@@ -1,0 +1,13 @@
+﻿feature,importance
+numeric__has_defanged_url,0.34832257
+categorical__detected_language_English,0.29389203
+numeric__has_url,0.08988512
+numeric__text_word_count,0.06375175
+numeric__text_char_count,0.04966056
+numeric__suspicious_keyword_count,0.046058886
+numeric__url_count_extracted,0.045725256
+numeric__body_char_count,0.036958866
+numeric__subject_char_count,0.013882541
+numeric__email_entropy,0.011862365
+categorical__detected_language_CodeMixed_Sinhala_English,0.0
+categorical__detected_language_CodeMixed_Tamil_English,0.0

@@ -1,0 +1,54 @@
+XGBoost Structured Model - Hybrid V2 Dataset
+============================================================
+
+Expected rows from Step 1:
+Train: 10000
+Validation: 9009
+Test: 9010
+
+Class order:
+['AI_Generated_Phishing', 'Business_Email_Compromise', 'Legitimate', 'Spam', 'Traditional_Phishing']
+
+Validation Results:
+Validation Accuracy: 0.7988677988677989
+Validation Macro F1: 0.8168178251915699
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.71      0.76      0.73       494
+               Legitimate       0.71      0.78      0.75      2934
+                     Spam       0.67      0.60      0.63      2349
+     Traditional_Phishing       0.99      0.96      0.97      2632
+
+                 accuracy                           0.80      9009
+                macro avg       0.82      0.82      0.82      9009
+             weighted avg       0.80      0.80      0.80      9009
+
+
+Test Results:
+Test Accuracy: 0.8007769145394007
+Test Macro F1: 0.8192395712687797
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.74      0.75      0.75       494
+               Legitimate       0.71      0.78      0.75      2935
+                     Spam       0.67      0.59      0.63      2349
+     Traditional_Phishing       0.98      0.97      0.98      2632
+
+                 accuracy                           0.80      9010
+                macro avg       0.82      0.82      0.82      9010
+             weighted avg       0.80      0.80      0.80      9010
+
+
+Confusion Matrix:
+[[ 600    0    0    0    0]
+ [   0  370   60   57    7]
+ [   0   29 2292  603   11]
+ [   0   80  846 1397   26]
+ [   0   20   16   40 2556]]
+
+Structured feature shape:
+Train: (10000, 12)
+Validation: (9009, 12)
+Test: (9010, 12)

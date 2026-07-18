@@ -1,0 +1,2 @@
+﻿Model,Test Set,Attack Types,Robustness Accuracy,Macro F1,Key Finding
+MLP Fusion Hybrid,50 manually designed robustness samples,"Code-mixed Sinhala-English, Tamil-English, AI-generated phishing, obfuscated URLs, BEC, spam, legitimate multilingual emails",72.0,0.43,Strong on code-mixed and obfuscated URL phishing; weak on AI-generated phishing and BEC classification

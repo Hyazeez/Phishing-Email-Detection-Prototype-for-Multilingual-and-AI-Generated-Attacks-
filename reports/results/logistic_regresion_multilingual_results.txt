@@ -1,0 +1,52 @@
+Train shape: (42044, 28)
+Validation shape: (9009, 28)
+Test shape: (9010, 28)
+
+Training class distribution:
+category
+Legitimate                   13695
+Traditional_Phishing         12284
+Spam                         10961
+AI_Generated_Phishing         2800
+Business_Email_Compromise     2304
+Name: count, dtype: int64
+
+Validation Results:
+Validation Accuracy: 0.9797979797979798
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.95      0.97      0.96       494
+               Legitimate       0.98      0.98      0.98      2934
+                     Spam       0.96      0.97      0.97      2349
+     Traditional_Phishing       1.00      0.99      0.99      2632
+
+                 accuracy                           0.98      9009
+                macro avg       0.98      0.98      0.98      9009
+             weighted avg       0.98      0.98      0.98      9009
+
+
+Test Results:
+Test Accuracy: 0.9801331853496116
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.92      0.99      0.95       494
+               Legitimate       0.98      0.98      0.98      2935
+                     Spam       0.97      0.97      0.97      2349
+     Traditional_Phishing       1.00      0.99      0.99      2632
+
+                 accuracy                           0.98      9010
+                macro avg       0.97      0.98      0.98      9010
+             weighted avg       0.98      0.98      0.98      9010
+
+
+Confusion Matrix:
+[[ 600    0    0    0    0]
+ [   0  487    2    5    0]
+ [   0    3 2870   61    1]
+ [   0   38   39 2268    4]
+ [   0    4    8   14 2606]]
+Class order: ['AI_Generated_Phishing', 'Business_Email_Compromise', 'Legitimate', 'Spam', 'Traditional_Phishing']
+
+Model saved to: D:\CSCI4018 - Research project - Phishing Email Detection\models\multilingual_tfidf_structured_features_model.pkl

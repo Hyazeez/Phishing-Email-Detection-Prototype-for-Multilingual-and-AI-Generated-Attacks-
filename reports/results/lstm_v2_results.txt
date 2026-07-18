@@ -1,0 +1,88 @@
+LSTM Benchmark - Multilingual V2 Dataset
+============================================================
+
+Train shape: (42044, 28)
+Validation shape: (9009, 28)
+Test shape: (9010, 28)
+
+Training class distribution:
+category
+Legitimate                   13695
+Traditional_Phishing         12284
+Spam                         10961
+AI_Generated_Phishing         2800
+Business_Email_Compromise     2304
+
+Class weights:
+{0: 3.003142857142857, 1: 3.649652777777778, 2: 0.614005111354509, 3: 0.7671562813611896, 4: 0.684532725496581}
+
+Validation Results:
+Validation Accuracy: 0.8687978687978688
+Validation Macro F1: 0.8751957082451269
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.72      0.87      0.79       494
+               Legitimate       0.83      0.86      0.85      2934
+                     Spam       0.78      0.75      0.77      2349
+     Traditional_Phishing       0.99      0.95      0.97      2632
+
+                 accuracy                           0.87      9009
+                macro avg       0.87      0.89      0.88      9009
+             weighted avg       0.87      0.87      0.87      9009
+
+
+Test Results:
+Test Accuracy: 0.8782463928967813
+Test Macro F1: 0.8863883402471234
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      1.00      1.00       600
+Business_Email_Compromise       0.75      0.91      0.82       494
+               Legitimate       0.85      0.87      0.86      2935
+                     Spam       0.80      0.76      0.78      2349
+     Traditional_Phishing       0.99      0.96      0.97      2632
+
+                 accuracy                           0.88      9010
+                macro avg       0.88      0.90      0.89      9010
+             weighted avg       0.88      0.88      0.88      9010
+
+
+Confusion Matrix:
+[[ 600    0    0    0    0]
+ [   0  449   13   31    1]
+ [   0   13 2557  363    2]
+ [   0  103  441 1781   24]
+ [   0   33   13   60 2526]]
+
+Training History:
+{
+  "accuracy": [
+    0.6166397333145142,
+    0.800328254699707,
+    0.8306773900985718,
+    0.8438302874565125,
+    0.8557463884353638
+  ],
+  "loss": [
+    0.7641749382019043,
+    0.40358418226242065,
+    0.3538037836551666,
+    0.32107993960380554,
+    0.3032178282737732
+  ],
+  "val_accuracy": [
+    0.7915418148040771,
+    0.8379398584365845,
+    0.8391608595848083,
+    0.8509268760681152,
+    0.8687978982925415
+  ],
+  "val_loss": [
+    0.4878356158733368,
+    0.4069838225841522,
+    0.4000312387943268,
+    0.37816622853279114,
+    0.3228778839111328
+  ]
+}

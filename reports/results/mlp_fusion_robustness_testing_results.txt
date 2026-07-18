@@ -1,0 +1,80 @@
+MLP Fusion Robustness Testing Results
+============================================================
+
+Model: Transformer embeddings + XGBoost probabilities + structured features -> MLP fusion
+
+Robustness Test Accuracy: 0.72
+
+Classification Report:
+                           precision    recall  f1-score   support
+
+    AI_Generated_Phishing       1.00      0.20      0.33        10
+Business_Email_Compromise       0.00      0.00      0.00         3
+               Legitimate       0.38      1.00      0.55         3
+                     Spam       0.33      0.50      0.40         2
+     Traditional_Phishing       0.81      0.94      0.87        32
+
+                 accuracy                           0.72        50
+                macro avg       0.50      0.53      0.43        50
+             weighted avg       0.75      0.72      0.67        50
+
+
+Confusion Matrix:
+[[ 2  0  1  1  6]
+ [ 0  0  2  0  1]
+ [ 0  0  3  0  0]
+ [ 0  0  1  1  0]
+ [ 0  0  1  1 30]]
+
+Detailed Results:
+                        attack_type                  category            prediction  confidence  correct
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      0.8848     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+Sinhala-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      0.9999     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+  Tamil-English code-mixed phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+              AI-generated phishing     AI_Generated_Phishing AI_Generated_Phishing      0.9583     True
+              AI-generated phishing     AI_Generated_Phishing  Traditional_Phishing      0.9984    False
+              AI-generated phishing     AI_Generated_Phishing                  Spam      0.4668    False
+              AI-generated phishing     AI_Generated_Phishing AI_Generated_Phishing      0.9972     True
+              AI-generated phishing     AI_Generated_Phishing  Traditional_Phishing      0.9913    False
+              AI-generated phishing     AI_Generated_Phishing            Legitimate      0.9999    False
+              AI-generated phishing     AI_Generated_Phishing  Traditional_Phishing      0.9908    False
+              AI-generated phishing     AI_Generated_Phishing  Traditional_Phishing      0.9992    False
+              AI-generated phishing     AI_Generated_Phishing  Traditional_Phishing      0.9356    False
+              AI-generated phishing     AI_Generated_Phishing  Traditional_Phishing      0.7587    False
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      0.9999     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      0.9783     True
+            Obfuscated URL phishing      Traditional_Phishing            Legitimate      0.7802    False
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      0.9847     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      1.0000     True
+            Obfuscated URL phishing      Traditional_Phishing  Traditional_Phishing      0.9999     True
+          Business Email Compromise Business_Email_Compromise            Legitimate      0.9995    False
+          Business Email Compromise Business_Email_Compromise  Traditional_Phishing      0.9862    False
+          Business Email Compromise Business_Email_Compromise            Legitimate      0.9481    False
+              Noisy spelling attack      Traditional_Phishing  Traditional_Phishing      0.6263     True
+              Noisy spelling attack      Traditional_Phishing                  Spam      0.9749    False
+      Legitimate multilingual email                Legitimate            Legitimate      1.0000     True
+     Legitimate Tamil-English email                Legitimate            Legitimate      1.0000     True
+           Legitimate English email                Legitimate            Legitimate      1.0000     True
+             Spam promotional email                      Spam            Legitimate      0.7916    False
+             Spam promotional email                      Spam                  Spam      0.9998     True

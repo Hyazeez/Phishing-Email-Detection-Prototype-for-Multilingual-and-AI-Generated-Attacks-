@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and caches
+*.log
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# User uploads
+uploads/
+temp/
+tmp/
+
+# Generated data
+data/raw/
+data/features_v2/
+data/features_v3/
+data/hybrid/
+data/robustness/output/
+
+# Large generated datasets
+data/processed/master_dataset.csv
+data/processed/master_dataset_cleaned.csv
+data/features/master_features.csv
+data/features/train_features.csv
+
+# Large generated model artifacts
+models/*.keras
+models/*.h5
+models/*.pkl
+models/*.joblib
+models/*.bin
+models/*.pt
+models/*.pth
+
+# Generated arrays
+*.npy
+*.npz
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# MySQL exports containing real data
+*.sql
+
+# Build files
+dist/
+build/
+*.egg-info/

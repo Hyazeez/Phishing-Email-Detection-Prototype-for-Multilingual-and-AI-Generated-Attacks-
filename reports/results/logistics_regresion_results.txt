@@ -1,0 +1,36 @@
+Validation Results:
+Validation Accuracy: 0.9615576635047429
+                           precision    recall  f1-score   support
+
+Business_Email_Compromise       0.84      0.97      0.90       494
+               Legitimate       0.99      0.98      0.98      2934
+                     Spam       0.97      0.94      0.95      2349
+     Traditional_Phishing       0.88      0.97      0.92       232
+
+                 accuracy                           0.96      6009
+                macro avg       0.92      0.96      0.94      6009
+             weighted avg       0.96      0.96      0.96      6009
+
+
+Test Results:
+Test Accuracy: 0.9594009983361065
+                           precision    recall  f1-score   support
+
+Business_Email_Compromise       0.82      0.98      0.89       494
+               Legitimate       0.99      0.97      0.98      2935
+                     Spam       0.96      0.94      0.95      2349
+     Traditional_Phishing       0.92      0.95      0.93       232
+
+                 accuracy                           0.96      6010
+                macro avg       0.92      0.96      0.94      6010
+             weighted avg       0.96      0.96      0.96      6010
+
+
+Confusion Matrix:
+[[ 482    2   10    0]
+ [   3 2859   68    5]
+ [  99   31 2205   14]
+ [   2    3    7  220]]
+Class order: ['Business_Email_Compromise', 'Legitimate', 'Spam', 'Traditional_Phishing']
+
+Model saved to: D:\CSCI4018 - Research project - Phishing Email Detection\models\baseline_tfidf_structured_features_model.pkl
